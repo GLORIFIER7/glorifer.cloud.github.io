@@ -1,0 +1,33 @@
+.divmain {
+justify-content:space-evenly;
+display:flex;
+}
+
+.div1 {
+ 
+    padding: 20px;
+    border: 5px solid black;
+    height: 500px;
+    width: 200px;
+}
+.div2 {
+    
+    padding: 20px;
+    border: 5px solid black;
+    height: 500px;
+    width: 200px;
+}
+.div3 {
+  
+    padding: 20px;
+    border: 5px solid black;
+    height: 500px;
+    width: 200px;
+}
+.div4 {
+   
+    padding: 20px;
+    border: 5px solid black;
+    height: 500px;
+    width: 200px;
+}

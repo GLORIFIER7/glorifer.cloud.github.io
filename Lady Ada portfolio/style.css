@@ -1,0 +1,651 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border:none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    /* font-size: 62.5%;
+    overflow-x: hidden; */
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+/*-------------------- Scroll bar section-----------------------------*/
+body::-webkit-scrollbar-thumb{
+    background: #af69ef;
+}
+
+body::-webkit-scrollbar{
+    width:1.4rem;
+}
+
+body::-webkit-scrollbar-track{
+    background:#311432;
+}
+
+body::-webkit-scrollbar-thumb{
+    background:#af69ef;
+}
+
+
+body{
+    background: #a32cc4;                /*  background color  #73bda8*/
+    overflow-x: hidden;    
+    padding-left: 35rem;        
+}
+
+
+section{
+    min-height: 100vh;
+    padding:1rem;
+}
+
+#menu{
+    position: fixed;
+    top:2rem; right:2rem;
+    background:#333;
+    color:#fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding:1rem 1.5rem;
+    z-index: 1000;
+    display: none;
+}
+/*-----------------------Button Section----------------------------*/
+.btn{
+    padding:.7rem 3rem;
+    background: #311432;
+    color: white;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+.btn i{
+    padding:0 .5rem;
+    font-size: 1.8rem;
+}
+
+.btn:hover{
+    background:#af69ef;
+    color: #311432;
+    font-weight: bold;
+    box-shadow: 1px 3px 10px #0e0d0d;
+}
+
+/*---------------------------- Heading Section----------------------------*/
+.heading{
+    text-align: center;
+    margin:0 6rem;
+    font-size: 4rem;
+    padding:1rem;
+    border-bottom: .2rem solid white;
+    color:#fff;
+}
+
+.heading span{
+    color:white;
+} 
+
+
+/*---------------------------Header / Side bar Section-----------------------*/
+header{                                                      
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 35rem;
+    background: #311432;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+    box-shadow: 1px 3px 10px #0e0d0d;
+}
+
+header .ada img{
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 5px solid #a32cc4;
+}
+
+header .ada .name{
+    font-size: 3.5rem;
+    color: white;
+}
+
+header .ada .title{
+    font-size: 2rem;
+    color: white;
+}
+
+header .ada .title2{
+    font-size: 1.5rem;
+    color: white;
+}
+
+header .navbar{
+    width: 100%;
+}
+
+header .navbar ul{
+    list-style: none;
+    padding: 1rem 3rem;
+}
+
+header .navbar ul li a{
+    display: block;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background: #a32cc4;
+    color: white;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+header .navbar ul li a:hover{
+    background: #af69ef;
+    color: #311432;
+    font-weight: bold;
+    box-shadow: 2px 1px 10px #ffffff;
+}
+
+/* #menu{
+    position: fixed;
+    top:2rem; right:2rem;
+    background:#981d26;
+    color:#ece6c2;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding:1rem 1.5rem;
+    z-index: 1000;
+    display: none;
+} */
+
+
+/*------------------------ Section Alignment Settings---------------------*/
+
+.home, .about, .contact, .services, .projects{                          
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding:0 15rem;
+}
+
+/*------------------------ Home Section ------------------------------*/
+
+.home h3{
+    font-size: 2.5rem;
+    color:#311432;
+    text-shadow: 1px 2px 3px #eee;
+    font-weight: bolder;
+}
+
+.home h1{
+    font-size:5rem;
+    color:#311432;
+    text-shadow: 1px 2px 3px white;
+    font-weight: bolder;
+}
+
+.home h1 span{
+    color: #311432;
+}
+
+.home p{
+    font-size:2rem;
+    color:white;
+    padding: 1rem 0;
+}
+
+
+/*------------------------------ About Section----------------------------*/
+.about .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:1rem 0;
+}
+
+.about .row .info{
+    flex:1 1 48rem;
+    padding:2rem 1rem;
+    padding-left: 6rem;
+}
+
+.about .row .info h3{
+    font-size: 2rem;
+    color: white;
+    padding:1rem 0;
+    font-weight: normal;
+
+}
+
+.about .row .info ul{
+    font-size: 2rem;
+    color: #e5a632;
+    padding:1rem 0;
+    font-weight: normal;
+}
+
+
+.about .row .info h3 span{
+    color:#311432;
+    font-weight: bold;
+    padding:0 .5rem;
+    
+}
+
+.about .row .counter{
+    flex:1 1 48rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about .row .counter .box{
+    width:20rem;
+    background:#222;
+    text-align: center;
+    padding: 2rem;
+    margin:2rem;
+}
+
+/* .about .row .counter .box span{
+    font-size: 4rem;
+    color:#e5a632; */
+
+
+.about .row .counter .box h3{
+    font-size: 2rem;
+    color:#fff;
+}
+.about .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+}
+.about .box-container .box{
+    height: 25rem;
+    width:25rem;
+    border-radius: 8px;
+    margin:2rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.about .box-container .box img{
+    height:100%;
+    width:100%;
+    border-radius: 8px;
+}
+
+.about .row .box-container div:hover img{
+    /* transform: rotate(360deg); */
+    transform: scale(1.2);
+    transition: 0.8s;
+}
+
+
+/*------------------------------- Service Section -------------------------------*/
+
+.services .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+}
+
+.services .box-container .box{
+    height: 30rem;
+    width:40rem;
+    border-radius: 1rem;
+    margin:2rem;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #311432;
+    box-shadow: 1px 3px 5px #2b2a2a;
+    background: white;
+
+}
+
+
+.services .box-container .box div p{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    padding: 30px;
+    font-size: 12pt;
+    text-align: justify;
+}
+
+.services .box-container .box div .serviceTitle{
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 8px;
+    background:#311432 ;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.services .box-container .box:hover div p{
+    transform: scale(1.1);
+}
+
+
+
+
+/*---------------------------------------------- Project Section -------------------------------*/
+
+.projects .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding:1rem 0;
+    padding-left: 3rem;
+}
+
+.projects .box-container .box{
+    width:30rem;
+    margin:4rem 1rem;
+    padding-left: 4rem;
+    border-left: .2rem solid white;
+    position: relative;
+    cursor: pointer;
+}
+
+.projects .box-container .box span{
+    font-size: 1.3rem;
+    background:#311432;
+    color:white;
+    border-radius: 5rem;
+    padding:.5rem 2.5rem;
+}
+
+.projects .box-container .box h3{
+    font-size: 2rem;
+    color:white;
+    padding-top: 1.5rem;
+}
+
+.projects .box-container .box p{
+    font-size: 1.4rem;
+    color:#eee;
+    padding: 1rem 0;
+}
+
+.projects .box-container .box:hover p{
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+
+/*----------------------------------------- Contact Section --------------------------------*/
+
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact .row .content{
+    flex:1 1 30rem;
+    padding:4rem;
+    padding-bottom: 0;
+}
+
+.contact .row form{
+    flex:1 1 45rem;
+    padding:2rem;
+    margin:2rem;
+    margin-bottom: 4rem;
+}
+
+.contact .row form .box{
+    padding:1.5rem;
+    margin:1rem 0;
+    background:white;
+    color:#311432;
+    text-transform: none;
+    font-size: 1.7rem;
+    width:100%;
+    border-radius: 10px;
+}
+
+.contact .row form .box::placeholder{
+    text-transform: capitalize;
+}
+
+.contact .row form .message{
+    height: 15rem;
+    resize: none;
+}
+
+.contact .row .content .title{
+    text-transform: uppercase;
+    color:white;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+.contact .row .content .info h3{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color:white;
+    padding:1rem 0;
+    font-weight: normal;
+}
+
+.contact .row .content .info h3 i{
+    padding-right: 1rem;
+    color:#311432;
+}
+
+
+
+
+/*---------------------------- Modal Section -------------------------------------------*/
+
+/* img{
+    border: 5px solid #d2a24c;
+} */
+
+#imgResponsive{
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#imgResponsive:hover{
+    opacity: 0.7;
+}
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    /* this property   */
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content{
+    margin: auto;
+    display:block;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 20px;
+}
+
+#caption{
+    margin: auto;
+    display: block;
+    width: 90%;
+    max-width: 900px;
+    text-align: center;
+    color: rgb(200, 255, 0);
+    padding: 10px 0;
+    height: 850px;
+}
+
+.modal-content, #caption{
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom{
+    from{-webkit-transform: scale(0);}
+    to {transform: scale(1);}
+}
+@keyframes  zoom {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+
+}
+.close{
+    position: absolute;
+    top: 50px;
+    right: 10rem;
+    color: #6f5643;
+    font-size: 5rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover, .close:focus{
+    color: #af69ef;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:700px)
+{
+        .modal-content{
+            width: 100%;
+        }
+
+        .close{
+            position: fixed;
+        }
+
+} 
+
+
+
+
+/* media queries  */
+
+@media (max-width:1200px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .home{
+        padding:1rem 4rem;
+    }
+
+}
+
+@media (max-width:991px){
+
+    header{
+        left:-120%;
+    }
+ 
+    #menu{
+        display: block;
+    }
+ 
+    header.toggle{
+     left:0%;
+    }
+ 
+    body{
+        padding:0;
+    }
+
+}
+
+@media (max-width:768px){
+
+    html{
+        font-size: 50%;
+    }
+ 
+ }
+
+@media (max-width:400px){
+
+    header{
+        width: 100vw;
+    }
+
+    .heading{
+        margin:0 3rem;
+    }
+
+    .about .row .counter .box{
+        width: 100%;
+    }
+ 
+    .services .box-container .box{
+        width:100%;
+    }
+
+    .projects .box-container .box{
+        width:100%;
+    }
+
+    .contact .row form{
+        margin:3rem 0;
+    }
+
+ }
+
+
+
+
+
+
+
+
+footer p{
+    background-color: #311432;
+    /* padding: 7px; */
+    /* font-family: Arial, Helvetica, sans-serif; */
+    color: white;
+    display: flex;
+    font-size: 2rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+ }

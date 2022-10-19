@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Challenge 2</title>
+</head>
+<body>
+    <table border="3" cellpadding="10px">
+        <thead>
+            <th>Qty</th>
+            <th>Item</th>
+            <th>Initial Cost</th>
+            <th>Final Cost</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>10</td>
+                <td>Apple</td>
+                <td>$1.00</td>
+                <td>$10.00</td>
+            </tr>
+
+            <tr >
+                <td colspan="4">Subtotal</td>
+            </tr>
+
+            <tr>
+                <td colspan="4">Subtotal <i>10%</i> VAT</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>
+        <form action="">
+            <label for="bNum">Batch Number:</label>
+            <select name="bNum" id="bNum">
+                <option value="select">--Select --</option>
+                <option value="b1">Batch 1</option>
+            </select>
+        </form>
+    </p>
+
+    <p>
+        <form action="">
+            <label for="fname">First Name:</label>
+            <input type="text" name="fname" id="fname" placeholder="Enter your first name" required> <br />
+
+            <label for="lname">Last Name:</label>
+            <input type="text" name="lname" id="lname" placeholder="Enter your last name" required> <br />
+
+            <label for="emailAddress">Email Address:</label>
+            <input type="email" name="emailAddress" id="emailAddress" placeholder="Enter your valid email address" required> <br />
+        </form>
+    </p>
+</body>
+</html>
+ 83  
+s03/index.html
+@@ -0,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to CSS</title>
+    <!-- <style> 
+    Internal or Embedded CSS
+        body{
+            background-color: lightblue;
+        }
+        h1 {
+            background-color: coral;
+        }
+        span {
+            background-color: pink;
+            color: yellow;
+        }
+    </style> -->
+
+    <!--Link for external CSS-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+
+    <h1>Welcome to CSS</h1>
+
+    <!--Inline CSS-->
+    <p style="color:red">
+        <span style="color: blue;">Lorem ipsum dolor sit amet consectetur adipisicing elit. </span>  Culpa, perferendis temporibus? Illum alias sequi nulla voluptatum quas accusamus. Molestiae error eos fugiat, autem magni laboriosam dicta minima! Numquam, labore consequatur? 
+    </p>
+
+    <p>
+        <h2 id="title-1">Hello World</h2>
+        <h2 class="title-2">Best Section 26</h2>
+    </p>
+
+    <form action="">
+        <label for="fname">First Name</label>
+        <input type="text" name="fname" id="fname">
+    </form>
+
+    <!--Combinator Selector-->
+
+    <div id="parent">
+        <p>
+            <span>First Paragraph</span>
+        </p>
+        <p>Second Paragraph</p>
+        <section>
+            <p> Third Paragraph </p>
+        </section>
+
+        <p>Trial Paragraph</p>
+    </div>
+
+    <p>Fourth Paragraph</p>
+    <p>Fifth Paragraph</p>
+
+    <div>
+        <p>Sixth Paragraph</p>
+        <p>Seventh Paragraph</p>
+    </div>
+
+    <p>Another Trial Paragraph</p>
+
+    <div>
+        <p>Eight Paragraph</p>
+        <p>Ninth Paragraph</p>
+        <p>New Paragraph</p>
+    </div>
+
+    <p class="screen">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores aliquam perspiciatis, corrupti pariatur ullam est, fuga, neque accusantium impedit animi enim a! Modi cupiditate magni nisi a sunt! Illum, nobis?
+    </p>
+
+    <a href="https://www.google.com/" target="_blank">Link</a>
+
+
+        <ul>
+            <li>Califonia Red</li>
+            <li>Smirn Off</li>
+            <li>Johnny Walker</li>
+        </ul>
+
+</body>
+</html>

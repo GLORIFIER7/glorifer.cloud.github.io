@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <form action="" class="form" style=text-align:center;>
+        <h1>ABC Company IT Support Request Form</h1>
+
+        <form action="">
+            <p>
+                <label for="fname">First Name:</label>
+                <input type="text" name="fname" id="fname" size="38" >
+            </p>
+    
+            <p>
+                <label for="lname">Last Name:</label>
+                <input type="text" name="lname" id="lname" size="38">
+            </p>
+    
+            <p>
+                <label for="emailAdd">Email Address:</label>
+                <input type="email" name="emailAdd" id="emailAdd" size="38">
+            </p>
+    
+            <p>
+                <label for="contactNumber">Contact Number:</label>
+                <input type="number" name="number" id="bNum" size="38" placeholder="Enter Your Complete Number Here">
+            </p>
+
+            <p>
+                <input type="radio" name="eType" id="eType">
+                <label for="eType">Onsite</label>
+                <input type="radio" name="eType" id="eType">
+                <label for="eType">Work From Home</label>
+            </p>
+            
+            <p>
+            <label for="location">Location:</label>
+            </p>
+           
+                <p>For Onsite, please state your Workstation No. Department Floor and Building </p>
+
+                <p> For work from Home, please complete your address and include landmark nearest to your location. </p>
+
+                <p>
+                    <input type="text" size="50">
+                </p>
+
+            
+            <p>
+                <label for="servicerequestform">Service Request Type:</label>
+                <select name="servicerequestform" id="servicerequestform">
+                    <option value="select">Select</option>
+                    <option value="servicerequestform">Destop/Laptop SetUp</option>
+                    <option value="servicerequestform">Destop/Laptop Support</option>
+                    <option value="servicerequestform">Destop/Laptop Maintenance</option>
+                    <option value="servicerequestform">Software Installation</option>
+                    <option value="servicerequestform">Software Support</option>
+                    <option value="servicerequestform">Computer Peripheral SetUp</option>
+                    <option value="servicerequestform">Peripheral Troubleshooting</option>
+                    <option value="servicerequestform">Computer Peripheral Maintenance</option>
+                </select>
+            </p>
+
+    
+            <p>
+                <label for="comments">Service Request Description:</label>
+                <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Explain your service request as detailed as possible." maxlength="100"></textarea>
+                <!--Placeholder - helps the user to guide them while filling up their form-->
+                <!--maxlength - number of characters to be input-->
+            </p>
+    
+            Upload a picture screenshoot for reference
+            <input type="file" name="screenShoot" id="screenShoot">
+
+            <p>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </p>
+
+    </form>
+   
+
+</body>
+</html>
