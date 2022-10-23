@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/login2.0/dist/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+</head>
+<body background="/login2.0/dist/logo.png">
+   
+    <form action="" class="text-center fw-semibold text-wrap">
+        <h1 class="neon">ABC Company IT Support Request Form</h1>
+
+        <form action="">
+            <p>
+                <label for="fname">First Name:</label>
+                <input  class="opacity-50" type="text" name="fname" id="fname" size="38" >
+            </p>
+    
+            <p>
+                <label for="lname">Last Name:</label>
+                <input  class="opacity-50" type="text" name="lname" id="lname" size="38">
+            </p>
+    
+            <p>
+                <label for="emailAdd">Email Address:</label>
+                <input  class="opacity-50" type="email" name="emailAdd" id="emailAdd" size="38">
+            </p>
+    
+            <p>
+                <label for="contactNumber">Contact Number:</label>
+                <input  class="opacity-50" type="number" name="number" id="bNum" size="38" placeholder="Enter Your Complete Number Here">
+            </p>
+
+            <p>
+                
+                <input class="input form-check-input" type="radio" name="eType" id="eType">
+                <label for="eType">Onsite</label>
+                <input class="input form-check-input" type="radio" name="eType" id="eType">
+                <label for="eType">Work From Home</label>
+             
+            </p>
+            
+            <p>
+            <label for="location">Location:</label>
+            </p>
+           
+                <p>For Onsite, please state your Workstation No. Department Floor and Building </p>
+
+                <p> For work from Home, please complete your address and include landmark nearest to your location. </p>
+
+                <p>
+                    <input  class="opacity-50"   type="text" size="50">
+                </p>
+
+            
+            <p>
+                <label for="servicerequestform">Service Request Type:</label>
+                <select name="servicerequestform" id="servicerequestform">
+                    <option value="select">Select</option>
+                    <option value="servicerequestform">Destop/Laptop SetUp</option>
+                    <option value="servicerequestform">Destop/Laptop Support</option>
+                    <option value="servicerequestform">Destop/Laptop Maintenance</option>
+                    <option value="servicerequestform">Software Installation</option>
+                    <option value="servicerequestform">Software Support</option>
+                    <option value="servicerequestform">Computer Peripheral SetUp</option>
+                    <option value="servicerequestform">Peripheral Troubleshooting</option>
+                    <option value="servicerequestform">Computer Peripheral Maintenance</option>
+                </select>
+            </p>
+
+    
+            <p>
+                <label for="comments">Service Request Description:</label>
+                <textarea  class="opacity-50" name="comments" id="comments" cols="30" rows="10" placeholder="Explain your service request as detailed as possible." maxlength="100"></textarea>
+                <!--Placeholder - helps the user to guide them while filling up their form-->
+                <!--maxlength - number of characters to be input-->
+            </p>
+    
+            Upload a picture screenshoot for reference
+            <input  class="opacity-50"  type="file" name="screenShoot" id="screenShoot">
+
+            <p>
+                <button  class="opacity-50"  type="submit">Submit</button>
+                <button  class="opacity-50"  type="reset">Reset</button>
+            </p>
+        </form>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
