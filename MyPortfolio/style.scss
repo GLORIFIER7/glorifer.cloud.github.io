@@ -66,3 +66,9 @@
 .navbar ul li:hover:after {
     width: 100%;
 }
+@media (min-width: 576px) and (max-width: 1399px) {
+    .card img {
+      display: block;
+      height: 100%;
+    }
+  }
