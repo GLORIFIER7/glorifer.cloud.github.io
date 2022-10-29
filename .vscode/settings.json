@@ -1,11 +1,34 @@
 {
-    "liveSassCompile.settings.formats": [
-
-        {
-            "format": "expanded",
-            "extensionName": ".css",
-            "savePath": "dist/css",
-            "savePathReplacementPairs": null
+    {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "[javascript]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
         }
-    ]
+      }
+    "screencastMode.keyboardShortcutsFormat": "commandWithGroupAndKeys",
+    "window.autoDetectColorScheme": false,
+    "debug.allowBreakpointsEverywhere": true,
+    "extensions.closeExtensionDetailsOnViewChange": true,
+    "liveServer.settings.multiRootWorkspaceName": "glorifer.cloud.github.io",
+    "gitlens.autolinks": [
+       
+    ],
+    "liveServer.settings.AdvanceCustomBrowserCmdLine": "",
+    "liveSassCompile.settings.autoprefix": [
+        
+    
+    ],
+    "vscode-edge-devtools.pathMapping": {
+
+        "/": "${workspaceFolder}"
+    },
+    "debug.javascript.debugByLinkOptions": "on",
+    "debug.javascript.resourceRequestOptions": {
+    
+    },
+    "debug.javascript.terminalOptions": {
+    
+    },
+    
+   
 }
