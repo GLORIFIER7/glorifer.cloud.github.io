@@ -1,19 +1,15 @@
 
 /*
-
     What do the mixins do? Avoid writing media query over and over again
     They provide a semantic media query mixin for the following:
-
     Respond above XX.
     Respond below XX.
     Respond between XX and XX.
     Where XX is the two letter Bootstrap breakpoint (i.e. sm, md).
-
     Usual way: @media (min-width: 768px) and (max-width: 991px) {
         Target devices between 768px and 992px. 
     }
   
-
 */
 
 /*
@@ -47,11 +43,8 @@ $breakpoint: map-get($breakpoints, xxl); // Get the extra extra large breakpoint
 
 
 /*
-
     Before going ahead and writing the media query it’s a good idea to ensure the key exists in the $breakpoints map in case you make a typo (i.e. @include respond-above(small)).
-
     To do this we use Sass' map-has-key function
-
 */
 
 @mixin respond-above($breakpoint) {
@@ -116,6 +109,11 @@ $breakpoint: map-get($breakpoints, xxl); // Get the extra extra large breakpoint
     }
 }
 
+/* 
+  Respond Between
+  - it checks both lower and upper keys exist in the breakpoints before writing this in the media query.
+*/
+
 /*
     Respond between
     Here we want to check that both the $lower and $upper keys exist in the $breakpoints map before writing the media query.
@@ -123,40 +121,40 @@ $breakpoint: map-get($breakpoints, xxl); // Get the extra extra large breakpoint
 
 @mixin respond-between($lower, $upper) {
 
-    // If both the lower and upper breakpoints exist in the map.
-    @if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper) {
-  
-      // Get the lower and upper breakpoints.
-      $lower-breakpoint: map-get($breakpoints, $lower);
-      $upper-breakpoint: map-get($breakpoints, $upper);
-  
-      // Write the media query.
-      @media (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 1)) {
-        @content;
-      }
-    
-    // If one or both of the breakpoints don't exist.
-    } @else {
-  
-      // If lower breakpoint is invalid.
-      @if (map-has-key($breakpoints, $lower) == false) {
-  
-        // Log a warning.
-        @warn 'Your lower breakpoint was invalid: #{$lower}.';
-      }
-  
-      // If upper breakpoint is invalid.
-      @if (map-has-key($breakpoints, $upper) == false) {
-  
-        // Log a warning.
-        @warn 'Your upper breakpoint was invalid: #{$upper}.';
-      }
-    }
-  }
+  // If both the lower and upper breakpoints exist in the map.
+  @if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper) {
 
-  @include respond-between(sm, xxl) {
-    .card img{
-      display: block;
-      height: 100%;
+    // Get the lower and upper breakpoints.
+    $lower-breakpoint: map-get($breakpoints, $lower);
+    $upper-breakpoint: map-get($breakpoints, $upper);
+
+    // Write the media query.
+    @media (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 1)) {
+      @content;
+    }
+  
+  // If one or both of the breakpoints don't exist.
+  } @else {
+
+    // If lower breakpoint is invalid.
+    @if (map-has-key($breakpoints, $lower) == false) {
+
+      // Log a warning.
+      @warn 'Your lower breakpoint was invalid: #{$lower}.';
+    }
+
+    // If upper breakpoint is invalid.
+    @if (map-has-key($breakpoints, $upper) == false) {
+
+      // Log a warning.
+      @warn 'Your upper breakpoint was invalid: #{$upper}.';
     }
   }
+}
+
+@include respond-between(sm, xxl) {
+  .card img{
+    display: block;
+    height: 100%;
+  }
+}
