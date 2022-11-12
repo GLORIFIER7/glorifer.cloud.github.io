@@ -158,3 +158,8 @@ $breakpoint: map-get($breakpoints, xxl); // Get the extra extra large breakpoint
     height: 100%;
   }
 }
+
+image {
+  height: auto;
+  width: auto;
+}
