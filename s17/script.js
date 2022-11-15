@@ -225,3 +225,47 @@ days.forEach(function (day){
     newDays.push(day);
 });
 console.log(newDays);
+
+
+
+//filter - it filters out the elements based on the conditions
+//returns an array that contains elements which passes a given condition.
+
+let digits = [1,2,3,4,5];
+let newFilter = digits.filter(
+    function (element) {
+        return element < 3
+    }
+);
+
+console.log(newFilter);
+
+//includes()
+//When checking array elements it is case sensitive
+//returning true or false as appropriate, it returns true if a string contains a SPECIFIED string, otherwise it will return false.
+//it determines whether an array includes a certain value among its entries.
+
+
+let pets = ["Shih Tzu", "Hedgehog", "Squirrel", "Rats"];
+
+let newIncludes = pets.includes("Squirrel");
+
+console.log(newIncludes); //true - boolean
+
+//Exercise using include method
+
+function checkTheWord (word)
+{
+    if (pets.includes(word) == true)
+    {
+        return word
+    }
+
+    else {
+        return `${word} not found`
+    }
+}
+
+console.log(checkTheWord("Squirrel"));
+console.log(checkTheWord("dogs"));
+
