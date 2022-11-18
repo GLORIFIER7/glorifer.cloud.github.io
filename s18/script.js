@@ -132,3 +132,12 @@ const studentGrades =[
 //ASSIGNMENT: Compute the student average by accessing the declared ojects
 
 //CLUE: We can use to compute the average manually or using for loop
+let total = 0;
+
+for (let m = 0; m < studentGrades.length; m++)
+{
+    total = total + studentGrades[0][m];
+}
+
+console.log(total);
+console.log(total/studentGrades.length);
