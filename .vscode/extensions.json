@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "ms-vscode.azure-account"
+        "ms-vscode.azure-account",
+        "googlecloudtools.cloudcode"
     ]
 }
