@@ -1,34 +1,111 @@
 {
-    {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "[javascript]": {
-          "editor.defaultFormatter": "esbenp.prettier-vscode"
-        }
-      }
-    "screencastMode.keyboardShortcutsFormat": "commandWithGroupAndKeys",
-    "window.autoDetectColorScheme": false,
-    "debug.allowBreakpointsEverywhere": true,
-    "extensions.closeExtensionDetailsOnViewChange": true,
-    "liveServer.settings.multiRootWorkspaceName": "glorifer.cloud.github.io",
-    "gitlens.autolinks": [
-       
-    ],
-    "liveServer.settings.AdvanceCustomBrowserCmdLine": "",
-    "liveSassCompile.settings.autoprefix": [
-        
+    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.activityBar.iconClickBehavior": "toggle",
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.startupEditor": "none",
+    "liveServer.settings.donotVerifyTags": false,
+    "github.gitAuthentication": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "editor.stickyScroll.enabled": true,
+    "git.enableSmartCommit": true,
+    "git.allowForcePush": true,
+    "git.allowNoVerifyCommit": true,
+    "git.alwaysShowStagedChangesResourceGroup": true,
+    "git.confirmSync": true,
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "gitlens.changes.toggleMode": "window",
+    "terminal.integrated.enableMultiLinePasteWarning": true,
+    "git.autofetch": true,
+  
     
-    ],
-    "vscode-edge-devtools.pathMapping": {
+    "liveSassCompile.settings.watchOnLaunch": false,
 
-        "/": "${workspaceFolder}"
-    },
-    "debug.javascript.debugByLinkOptions": "on",
-    "debug.javascript.resourceRequestOptions": {
     
-    },
-    "debug.javascript.terminalOptions": {
-    
-    },
-    
-   
+        "liveSassCompile.settings.generateMap" : false,
+        "liveSassCompile.settings.showOutputWindow": true,
+        "liveSassCompile.settings.formats":[
+            {
+                "format": "expanded",
+                "extensionName": ".css",
+                "savePath": "scss"
+            }
+        ],
+        "liveSassCompile.settings.excludeList": [ 
+            "**/node_modules/**",
+            ".vscode/**" ,
+        ],
+        "liveSassCompile.settings.includeItems": [
+            "/sass_compiler_config/src/style.scss",
+        ],
+        "liveSassCompile.settings.autoprefix": [
+            
+            "> 1%",
+            "last 2 versions"
+        ],
+        "prettier.bracketSameLine": true,
+        "editor.linkedEditing": true,
+        "liveServer.settings.CustomBrowser": "chrome",
+        "prettier.enableDebugLogs": true,
+        "prettier.endOfLine": "auto",
+        "prettier.insertPragma": true,
+        "prettier.singleAttributePerLine": true,
+        "prettier.vueIndentScriptAndStyle": true,
+        "prettier.withNodeModules": true,
+        "prettier.jsxSingleQuote": true,
+        "prettier.requirePragma": true,
+        "prettier.singleQuote": true,
+        "prettier.trailingComma": "all",
+        "prettier.useTabs": true,
+        "prettier.resolveGlobalModules": true,
+        "editor.guides.bracketPairs": true,
+       
+        "files.autoGuessEncoding": true,
+        "editor.formatOnPaste": true,
+        "explorer.confirmDelete": false,
+        "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+        "workbench.trustedDomains.promptInTrustedWorkspace": true,
+        "typescript.format.placeOpenBraceOnNewLineForFunctions": true,
+        "typescript.format.placeOpenBraceOnNewLineForControlBlocks": true,
+        "javascript.format.placeOpenBraceOnNewLineForFunctions": true,
+        "cloudcode.updateChannel": "Insiders",
+        "workbench.settings.openDefaultSettings": true,
+        "emmet.preferences": {
+            "word_separators": "./\\()\"'-:,.;<>~!@#%^&*|+=[]{}`~?",
+            "bracket-pair-colorizer-2.depreciation-notice": true,
+            "bracket-pair-colorizer-2.highlightActiveScope": true,
+            "bracket-pair-colorizer-2.showBracketsInGutter": true,
+            "bracket-pair-colorizer-2.showBracketsInRuler": true,
+        },
+        "cSpell.customDictionaries": {
+
+            "project-words": {
+            "name": "project-words",
+            "path": "${workspaceRoot}/project-words.txt",
+            "description": "Words used in this project",
+            "addWords": true
+            },
+            "custom": true, // Enable the `custom` dictionary
+            "internal-terms": false // Disable the `internal-terms` dictionary
+
+        },
+        "cSpell.globRoot": "${workspaceFolder}",
+        
 }
+{
+"java.configuration.runtimes": [
+  {
+    "name": "JavaSE-1.8",
+    "path": "/path/to/jdk-8",
+  },
+  {
+    "name": "JavaSE-11",
+    "path": "/path/to/jdk-11",
+  },
+  {
+    "name": "JavaSE-19",
+    "path": "/path/to/jdk-19",
+    "default": true
+  },
+]
+};

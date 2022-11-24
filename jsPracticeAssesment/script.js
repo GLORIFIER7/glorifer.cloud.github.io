@@ -135,46 +135,49 @@
 //     }
 // }
 // STEP 1
-console.log("Hello World");
-let student = ["John", "Jane", "Joe"];
-let message = (" is added to the student's list");
-console.log(student[0] + message);
-console.log(student[1] + message);
-console.log(student[2] + message);
-console.log("There are total number of 3 students in the student's list");
+// console.log("Hello World");
+// let student = ["John", "Jane", "Joe"];
+// let message = (" is added to the student's list");
+// console.log(student[0] + message);
+// console.log(student[1] + message);
+// console.log(student[2] + message);
+// console.log("There are total number of 3 students in the student's list");
 
-// STEP 2
-console.log(student[1]);
-console.log(student[2]);
-console.log(student[0]);
-// STEP 3
-let foundJoe = student.find(
-    function() {
-       return (student !== "Joe")
-    }
-);
+// // STEP 2
+// console.log(student[1]);
+// console.log(student[2]);
+// console.log(student[0]);
+// // STEP 3
+// let foundJoe = student.find(
+//     function() {
+//        return (student !== "Joe")
+//     }
+// );
 
-if (foundJoe === undefined) {
-    console.log(`Joe is not found on the list`);
-}
+// if (foundJoe === undefined) {
+//     console.log(`Joe is not found on the list`);
+// }
 
-else {
-    console.log(`Joe is an Enrollee`);
-};
-// STEP 4
-let section = [" - Section A"];
-let s1 = student[1]+section;
-let s2 = student[2]+section;
-let s3 = student[0]+section;
-let sInfo = [s1, s2, s3];
-console.log(sInfo);
-// STEP 5
-function removeJoe() {
-    console.log(student[2].slice);
-    if (removeJoe === true) {
-        console.log("Joe was removed from student list");
-    }
-    else(console.log(student));
-}
+// else {
+//     console.log(`Joe is an Enrollee`);
+// };
+// // STEP 4
+// let section = [" - Section A"];
+// let s1 = student[1]+section;
+// let s2 = student[2]+section;
+// let s3 = student[0]+section;
+// let sInfo = [s1, s2, s3];
+// console.log(sInfo);
+// // STEP 5
+// function removeJoe() {
+//     console.log(student[2].slice);
+//     if (removeJoe === true) {
+//         console.log("Joe was removed from student list");
+//     }
+//     else(console.log(student));
+// }
 
-removeJoe();
+// removeJoe();
+let name = JSON;
+let surname = Dole;
+console.log(${name} + )
