@@ -61,16 +61,10 @@
         {
             "name": "Launch Edge Headless and attach DevTools",
             "configurations": [
-                "Launch Microsoft Edge",
-                "Open Edge DevTools"
+                "Bash-Debug (simplest configuration)"
+                
             ]
         },
-        {
-            "name": "Launch Edge and attach DevTools",
-            "configurations": [
-                "Launch Microsoft Edge",
-                "Open Edge DevTools"
-            ]
-        }
+       
     ]
 }

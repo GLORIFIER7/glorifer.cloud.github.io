@@ -17,7 +17,8 @@
 			"extensions": [
 				"mads-hartmann.bash-ide-vscode",
 				"rogalmic.bash-debug",
-				"redhat.java"
+				"redhat.java",
+				"Shan.code-settings-sync"
 			]
 		}
 	},
