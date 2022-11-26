@@ -18,7 +18,8 @@
 				"mads-hartmann.bash-ide-vscode",
 				"rogalmic.bash-debug",
 				"redhat.java",
-				"Shan.code-settings-sync"
+				"Shan.code-settings-sync",
+				"ms-azuretools.vscode-docker"
 			]
 		}
 	},

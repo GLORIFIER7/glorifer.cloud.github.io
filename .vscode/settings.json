@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.colorTheme": "Default Dark+",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.activityBar.iconClickBehavior": "toggle",
     "security.workspace.trust.untrustedFiles": "open",
@@ -109,3 +109,18 @@
   },
 ]
 };
+"java.configuration.runtimes": [
+  {
+    "name": "JavaSE-1.8",
+    "path": "/path/to/jdk-8",
+  },
+  {
+    "name": "JavaSE-11",
+    "path": "/path/to/jdk-11",
+  },
+  {
+    "name": "JavaSE-17",
+    "path": "/path/to/jdk-17",
+    "default": true
+  },
+];
