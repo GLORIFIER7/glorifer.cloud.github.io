@@ -1,4 +1,5 @@
 console.log("connected");
+
 //recursion
 /*
     Syntax:
@@ -9,9 +10,12 @@ console.log("connected");
     }
     recurse();
 */
+
 // let countDown = function func(fromNumber) {
 //     console.log(fromNumber);
+
 //     let nextNum = fromNumber -1;
+
 //     if(nextNum > 0){
 //         func(nextNum);
 //     }
@@ -19,10 +23,13 @@ console.log("connected");
 //         alert ("Happy New Year");
 //     }
 // }
+
 // let newYearCountDown = countDown;
 // countDown = null;
 // newYearCountDown(5);
+
 //factorial using a recursion
+
 function factorial(x){
     //if number is 0
     if (x === 0){
@@ -32,7 +39,9 @@ function factorial(x){
         return x * factorial(x-1);
     }
 }
+
 const num = 3;
+
 if (num > 0){
     let result = factorial(num);
     console.log(`The factorial of ${num} is ${result}`);
@@ -67,6 +76,7 @@ let linearSearch = (list,value) => {
 
 //invoke the function in the console log
 console.log(linearSearch(list,value)); //element 3 is in the index 4
+
 //linear search for grocery items
 let items = ["yakult","cheese","soju","chocolate","chuckie","dishwashing liquid", "colgate", "toyo", "sardinas"];
 let isFound = false;
@@ -79,6 +89,7 @@ items.forEach(function (itemValue, index){
         return;
     }
 });
+
 if (!isFound){
     console.log("Item not found");
 }
@@ -164,3 +175,154 @@ function bubbleSorting(arr){
 
 //invoke the function in the console log
 console.log(bubbleSorting([5,3,8,4,6]));
+
+//Selection Sorting
+function selectionSorting(arr){
+    let min;
+    //passes the elements - outer loop
+    for (let i = 0; i < arr.length; i++)
+    {
+        //index of the smallest element to be the ith element
+        min = i;
+        //check through the rest of the array for a lesser element - inner loop
+        for (let j = i + 1; j < arr.length; j++)
+        {
+            if(arr[j] < arr[min]){
+                min = j;
+            }
+        }
+        //compare the indexes
+        if(min !== i){
+            //swapping procedure
+            [arr[i], arr[min]] = [arr[min], arr[i]];
+        }
+    }
+    return arr;
+}
+//invoke the function to the console
+console.log(selectionSorting([29, 72, 98, 13, 87, 66, 52, 51, 36]));
+
+//Insertion Sorting - compares the value one at a time.
+function insertSorting (array){
+    //Start from the second element - outer loop
+    for (let i = 1; i < array.length; i++){
+        //Go through the elements - inner loop
+        for (let j = i - 1; j > -1; j--)
+        {
+            //value comparison using ascending order
+            if (array [j + 1] < array[j])
+            {
+                //swapping procedure
+                [array [j+1], array[j]] = [array [j], array[j + 1]];
+            }
+        }
+    }
+
+    return array;
+}
+//invoke function in the console
+console.log(insertSorting([23, 1, 10, 5, 2]));
+
+//Merge sorting - divide the elements in the array and sort it until it is finalized
+//merging two arrays appropriately.
+
+function merge(array1, array2){
+    //create a new empty array and have 2 value pointers
+    let res = [], i =0, j=0;
+
+    //sort the first array
+    if(array1.length > 1)
+    {
+        let min = 0;
+
+        for (let i = 0; i < array1.length ; i++)
+        {
+            if (i !== min)
+            {
+                if(array1[i] < array1[min])
+                {
+                    //swapping element procedure
+                    [array1[i], array1[min]] = [array1[min], array1[i]];
+
+                    //change the minimum
+                    min = i;
+                }
+            }
+        }
+    }
+
+    //sort the second array
+    if(array2.length > 1)
+    {
+        let min = 0;
+        for (let i = 0; i < array2.length; i++)
+        {
+            if (i !== min)
+            {
+                if (array2[i] < array2[min]){
+                    //swaping element procedure
+                    [array2[i], array2[min]] = [array2[min], array2[i]];
+                    //change the minimum
+                    min = i;
+                }
+            }
+        }
+    }
+
+    //value comparison
+    while(i< array1.length && j < array2.length)
+    {
+        if (array1 [i] < array2[j])
+        {
+            res.push(array1[i]);
+            i++;
+        }
+        else {
+            res.push(array2[j]);
+            j++;
+        }
+    }
+
+    //pushing the rest of array2
+    while (j <array2.length){
+        res.push(array2[j]);
+        j++;
+    }
+
+    return res;
+}
+
+//merge sort
+function mergeSort(arr){
+    if (arr.length <= 1) return arr;
+
+    //splitting into halves
+    let mid = Math.ceil(arr.length / 2);
+
+    let array1 = arr.slice(0, mid);
+
+    let array2 = arr.slice(mid);
+
+    let array1_subarrays = [], sorted_array1_subarrays=[];
+
+    let array2_subarrays = [], sorted_array2_subarrays=[];
+
+    //loop through array 1 making subarrays of two elements
+    for (let i = 0; i < array1.length; i += 2)
+    {
+        array1_subarrays.push(array1.slice(i, i+2));
+    }
+
+    //loop through array 2 making subarrays of two elements
+    for (let i =0; i < array2.lengthl i += 2)
+    {
+        array2_subarrays.push(array2.slice(i, i + 2));
+    }
+
+    //sort each subarrays of array 1
+    for (let i=0; i<array1_subarrays.length; i += 2)
+    {
+        let result = merge(array1_subarrays[i].array1_subarrays[i + 1]);
+        result.forEach((value)=> sorted_array1_subarrays.push(value));
+    }
+}
