@@ -18,6 +18,7 @@ class userWeight{
         this.message = message;
         
     }
+   
 }
 console.log(userWeight);
 let user = prompt("Enter your weight in kilogram(kg).");
