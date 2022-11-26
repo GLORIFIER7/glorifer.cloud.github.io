@@ -283,6 +283,12 @@ function merge(array1, array2){
         }
     }
 
+    //push the rest of array1
+    while (i < array1.length){
+        res.push(array1[i]);
+        i++;
+    }
+
     //pushing the rest of array2
     while (j <array2.length){
         res.push(array2[j]);
@@ -314,7 +320,7 @@ function mergeSort(arr){
     }
 
     //loop through array 2 making subarrays of two elements
-    for (let i =0; i < array2.lengthl i += 2)
+    for (let i =0; i < array2.length; i += 2)
     {
         array2_subarrays.push(array2.slice(i, i + 2));
     }
@@ -322,7 +328,163 @@ function mergeSort(arr){
     //sort each subarrays of array 1
     for (let i=0; i<array1_subarrays.length; i += 2)
     {
-        let result = merge(array1_subarrays[i].array1_subarrays[i + 1]);
+        let result = merge(array1_subarrays[i],array1_subarrays[i + 1]);
+
         result.forEach((value)=> sorted_array1_subarrays.push(value));
     }
+
+    //sort each subarrays of array 2
+    for(let i =0; i<array2_subarrays.length; i += 2)
+    {
+        let result = merge(array2_subarrays[i],array2_subarrays[i + 1]);
+
+        result.forEach((value)=>sorted_array2_subarrays.push(value));
+    }
+
+    let result = merge(sorted_array1_subarrays, sorted_array2_subarrays);
+
+    return result;
 }
+
+//invoke the function inside the console
+console.log(mergeSort([70,50,30,10,20,40,60]));
+
+//Quick Sort - divide and conquer technique
+
+//Step 1: Create a partition
+function quickSortPartition(items, left, right){
+
+    let pivot = items[Math.floor((right + left)/2)];
+    let i = left; //left pointer
+    let j = right; //right pointer
+
+    while(i <= j)
+    {
+        //increment left pointer if the value is less than the pivot
+        while(items[i] < pivot)
+        {
+            i++;
+        }
+
+        //decrement right pointer if the value is more than the pivot
+        while(items[j] > pivot)
+        {
+            j--;
+        }
+
+        //swapping procedure
+        if (i <= j)
+        {
+            [items[i], items[j]] = [items[j], items[i]];
+            i++;
+            j++;
+        }
+    }
+    //return to the left pointer
+    return i;
+}
+
+//Step 2:sorting process - recursion tooks place because we call out the function to ourselves
+function quickSort(items,left,right)
+{
+    let index;
+    if(items.length > 1)
+    {
+        index = quickSortPartition(items, left, right); //get the left pointer returned.
+
+        if(items.length > 1)
+        {
+            index = quickSortPartition(items, left, right);
+        }
+        
+        if(left < index - 1)
+        {
+            //more elements on the left side
+            quickSort(items,index,index-1);
+        }
+
+        if(index < right)
+        {
+            //more elements on the right side
+            quickSort(items, index, right);
+        }
+    }
+
+    return items; //this returns the sorted array
+}
+
+let items1 = [5,3,7,6,2,9];
+console.log(quickSort(items1, 0, items1.length -1 ));
+
+//String match method - built in function
+
+/*
+    Syntax:
+    str.match (regexp)
+    whereas:
+    str = string
+    match() take in
+    regexp - regular expression object(Argument is implicitly converted to regular expression if it is a non regular expression)
+    NOTE: if we do not give any parameters, match() returns [""]
+*/
+
+// const string = "I am learning JavaScript not Java";
+// const re = /Java/;
+
+// let result = string.match(re);
+// console.log("Result of matching /Java/");
+// //without using gflag - we only get the first match but with detailed information like index, input and groups
+// console.log(result);
+
+// const re1 = /Java/g;
+// let result1 = string.match(re1);
+
+// console.log("Result of matching /Java/ with a g flag:");
+// //with using g flag it will return only the first match.
+// console.log(result1);
+
+//groups - an object of named capturing groups having keys as the names and values as the captured matches.
+//index - index of the seach where a result was found
+//input - the copy of the search string
+
+//Matching sections in a string
+const sentence = "My name is Jelly. Your name is Ivan.";
+
+//expression matches case-sensitive name + any alphabets till period
+const re = /name\sis\s[a-zA-Z]+\./gi;
+
+let res = sentence.match(re);
+console.log(res); //['name is Jelly.', 'name is Ivan.']
+
+//using named capturing groups
+const reg1 = /name\sis\s(?<name>[a-zA-Z]+)\./i;
+let found = sentence.match(reg1);
+console.log(found.groups); //object: {name: 'Jelly'}
+//groups - property of match that is an object
+//capture group names and values.
+
+//String parse
+
+const data =
+`
+Title, Author, Publication Date, Publisher
+ES6 in Practice, Zsolt Nagy, 2017, Self Published
+The Developer's Edge, Zsolt Nagy, 2016, Self Published
+Regex Quick Syntax Reference, Zsolt Nagy, 2018, Apress
+`;
+
+console.log(data);
+console.log(typeof data); //String
+
+// const result = data.trim().split(`\n`).map(row => row.split(','));
+// console.log(result);
+
+const result = [];
+const rows = data.trim().split('\n');
+
+for (let row of rows)
+{
+    result.push(row.split(','));
+}
+console.log(result);
+console.log(typeof result); //object
