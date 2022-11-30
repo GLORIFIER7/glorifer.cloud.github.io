@@ -112,7 +112,7 @@
             },
             "Git Bash": {
                 "source": "Git Bash",
-                "path": "C:\\89\\Documents\\GitHub\\glorifer.cloud.github.io\\git.exe",
+                "path": "C:\\89\\Documents\\GitHub\\glorifer.cloud.github.io",
                 "args": [
                     "--login"
                 ]
@@ -172,7 +172,7 @@
         "git.fetchOnPull": true,
         "git.followTagsWhenSync": true,
         "git.mergeEditor": true,
-        "git.path": "C:\\\\89\\\\Documents\\\\GitHub\\\\glorifer.cloud.github.io\\git.exe",
+        "git.path": "C:\\\\89\\\\Documents\\\\GitHub\\\\glorifer.cloud.github.io",
         "git.showPushSuccessNotification": true,
         "git.terminalGitEditor": true,
         "gitlens.codeLens.includeSingleLineSymbols": true,
