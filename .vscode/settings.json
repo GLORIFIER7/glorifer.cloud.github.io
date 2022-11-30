@@ -1,10 +1,7 @@
 {
-    "workbench.colorTheme": "Default Dark+",
-    "workbench.iconTheme": "material-icon-theme",
     "workbench.activityBar.iconClickBehavior": "toggle",
     "security.workspace.trust.untrustedFiles": "open",
-    "workbench.startupEditor": "none",
-    "liveServer.settings.donotVerifyTags": false,
+    "liveServer.settings.donotVerifyTags": true,
     "github.gitAuthentication": true,
     "liveServer.settings.donotShowInfoMsg": true,
     "editor.stickyScroll.enabled": true,
@@ -13,7 +10,7 @@
     "git.allowNoVerifyCommit": true,
     "git.alwaysShowStagedChangesResourceGroup": true,
     "git.confirmSync": true,
-    "terminal.integrated.defaultProfile.windows": "Git Bash",
+      
     "gitlens.changes.toggleMode": "window",
     "terminal.integrated.enableMultiLinePasteWarning": true,
     "git.autofetch": true,
@@ -23,17 +20,17 @@
 
     
         "liveSassCompile.settings.generateMap" : false,
-        "liveSassCompile.settings.showOutputWindow": true,
+       
         "liveSassCompile.settings.formats":[
             {
                 "format": "expanded",
                 "extensionName": ".css",
-                "savePath": "scss"
+                "savePath": "/scss"
             }
         ],
         "liveSassCompile.settings.excludeList": [ 
-            "**/node_modules/**",
-            ".vscode/**" ,
+            "/**/node_modules/**",
+            "/.vscode/**" ,
         ],
         "liveSassCompile.settings.includeItems": [
             "/sass_compiler_config/src/style.scss",
@@ -45,7 +42,6 @@
         ],
         "prettier.bracketSameLine": true,
         "editor.linkedEditing": true,
-        "liveServer.settings.CustomBrowser": "chrome",
         "prettier.enableDebugLogs": true,
         "prettier.endOfLine": "auto",
         "prettier.insertPragma": true,
@@ -79,6 +75,7 @@
         },
         "cSpell.customDictionaries": {
 
+
             "project-words": {
             "name": "project-words",
             "path": "${workspaceRoot}/project-words.txt",
@@ -86,41 +83,201 @@
             "addWords": true
             },
             "custom": true, // Enable the `custom` dictionary
-            "internal-terms": false // Disable the `internal-terms` dictionary
+            "internal-terms": true// Disable the `internal-terms` dictionary
 
         },
-        "cSpell.globRoot": "${workspaceFolder}",
+        "docker.commands.attach": "${config:docker.dockerPath} exec -it ${containerId} ${shellCommand}",
+        "git.rebaseWhenSync": true,
+        "sync.autoDownload": true,
+        "sync.autoUpload": true,
+        "sync.quietSync": true,
+        "sync.forceUpload": true,
+        "sync.forceDownload": true,
+        "[jsonc]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "reactSnippets.settings.prettierEnabled": true,
+        "terminal.integrated.profiles.windows": {
+            "PowerShell": {
+                "source": "PowerShell",
+                "icon": "terminal-powershell"
+            },
+            "Command Prompt": {
+                "path": [
+                    "${env:windir}\\Sysnative\\cmd.exe",
+                    "${env:windir}\\System32\\cmd.exe"
+                ],
+                "args": [],
+                "icon": "terminal-cmd"
+            },
+            "Git Bash": {
+                "source": "Git Bash",
+                "path": "C:\\89\\Documents\\GitHub\\glorifer.cloud.github.io\\git.exe",
+                "args": [
+                    "--login"
+                ]
+            },
+            "glorifier7": {
+                "path": "C:\\89\\Documents\\GitHub\\glorifer.cloud.github.io",
+                "args": [
+                    "--login"
+                ]
+            },
+            "Windows PowerShell": {
+                "path": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+            }
+        },
+        "grunt.autoDetect": "on",
+        "diffEditor.codeLens": true,
+        "editor.suggest.shareSuggestSelections": true,
+        "editor.suggest.showStatusBar": true,
+        "files.autoSave": "afterDelay",
+        "workbench.list.smoothScrolling": true,
+        "workbench.colorCustomizations": {
+        "[Default High Contrast Light]": {
+            "editorBracketPairGuide.activeBackground1": "#ff0000"
+        }
+        },
+        "workbench.editor.autoLockGroups": {
+            "default": true,
+            "jsProfileVisualizer.cpuprofile.table": true
+        },
+        "workbench.editor.enablePreviewFromCodeNavigation": true,
+        "workbench.editor.highlightModifiedTabs": true,
+        "workbench.editor.enablePreviewFromQuickOpen": true,
+        "workbench.settings.useSplitJSON": true,
+        "window.autoDetectColorScheme": true,
+        "explorer.fileNesting.enabled": true,
+        "cloudcode.enableMultiSkaffoldConfigsKey": true,
+        "cloudcode.yaml.format.enable": true,
+        "cSpell.autoFormatConfigFile": true,
+        "cSpell.validateDirectives": true,
+        "cSpell.spellCheckOnlyWorkspaceFiles": true,
+        "cSpell.advanced.feature.useReferenceProviderWithRename": true,
+        "css.format.spaceAroundSelectorSeparator": true,
+        "less.format.spaceAroundSelectorSeparator": true,
+        "scss.format.spaceAroundSelectorSeparator": true,
+        "dev.containers.executeInWSL": true,
+        "dotfiles.repository": "https://github.com/glorifier7.io",
+        "docker.truncateLongRegistryPaths": true,
+        "eag.runCompilerGenerator": true,
+        "emmet.showSuggestionsAsSnippets": true,
+        "emmet.useInlineCompletions": true,
+        "emmet.triggerExpansionOnTab": true,
+        "eslint.alwaysShowStatus": true,
+        "eslint.debug": true,
+        "eslint.format.enable": true,
+        "eslint.lintTask.enable": true,
+        "eslint.useESLintClass": true,
+        "git.fetchOnPull": true,
+        "git.followTagsWhenSync": true,
+        "git.mergeEditor": true,
+        "git.path": "C:\\\\89\\\\Documents\\\\GitHub\\\\glorifer.cloud.github.io\\git.exe",
+        "git.showPushSuccessNotification": true,
+        "git.terminalGitEditor": true,
+        "gitlens.codeLens.includeSingleLineSymbols": true,
+        "gitlens.views.repositories.includeWorkingTree": true,
+        "gitlens.views.repositories.showIncomingActivity": true,
+        "gitlens.views.repositories.compact": true,
+        "gitlens.advanced.fileHistoryFollowsRenames": true,
+        "gitlens.advanced.fileHistoryShowAllBranches": true,
+        "gitlens.views.contributors.showAllBranches": true,
+        "gitlens.gitCommands.search.matchAll": true,
+        "gitlens.detectNestedRepositories": true,
+        "gitlens.advanced.messages": {
+            "suppressCommitHasNoPreviousCommitWarning": true,
+            "suppressCommitNotFoundWarning": true,
+            "suppressCreatePullRequestPrompt": true,
+            "suppressDebugLoggingWarning": true,
+            "suppressFileNotUnderSourceControlWarning": true,
+            "suppressGitDisabledWarning": true,
+            "suppressGitMissingWarning": true,
+            "suppressGitVersionWarning": true,
+            "suppressLineUncommittedWarning": true,
+            "suppressNoRepositoryWarning": true,
+            "suppressRebaseSwitchToTextWarning": true,
+            "suppressIntegrationDisconnectedTooManyFailedRequestsWarning": true,
+            "suppressIntegrationRequestFailed500Warning": true,
+            "suppressIntegrationRequestTimedOutWarning": true
+        },
+        "gitlens.advanced.abbreviateShaOnCopy": true,
+        "html.format.indentHandlebars": true,
+        "html.format.indentInnerHtml": true,
+        "html.format.templating": true,
+        "java.codeGeneration.generateComments": true,
+        "java.codeGeneration.hashCodeEquals.useJava7Objects": true,
+        "java.codeGeneration.hashCodeEquals.useInstanceof": true,
+        "json.format.keepLines": true,
+        "liveServer.settings.fullReload": true,
+        "prettier.requireConfig": true,
+        "remoteHub.richNavigation.enabled": true,
+        "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+        "javascript.inlayHints.enumMemberValues.enabled": true,
+        "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+        "javascript.inlayHints.parameterTypes.enabled": true,
+        "javascript.inlayHints.variableTypes.enabled": true,
+        "javascript.suggest.completeFunctionCalls": true,
+        "js/ts.implicitProjectConfig.checkJs": true,
+        "js/ts.implicitProjectConfig.experimentalDecorators": true,
+        "typescript.disableAutomaticTypeAcquisition": true,
+        "typescript.enablePromptUseWorkspaceTsdk": true,
+        "typescript.format.insertSpaceAfterConstructor": true,
+        "typescript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+        "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+        "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
+        "typescript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
+        "typescript.format.insertSpaceAfterTypeAssertion": true,
+        "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
+        "typescript.implementationsCodeLens.enabled": true,
+        "typescript.inlayHints.enumMemberValues.enabled": true,
+        "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+        "typescript.inlayHints.variableTypes.enabled": true,
+        "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+        "typescript.inlayHints.parameterTypes.enabled": true,
+        "typescript.referencesCodeLens.enabled": true,
+        "typescript.referencesCodeLens.showOnAllFunctions": true,
+        "typescript.suggest.completeFunctionCalls": true,
+        "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+        "typescript.tsserver.enableTracing": true,
+        "java.import.generatesMetadataFilesAtProjectRoot": true,
+        "java.implementationsCodeLens.enabled": true,
+        "java.referencesCodeLens.enabled": true,
+        "java.signatureHelp.description.enabled": true,
+        "java.symbols.includeSourceMethodDeclarations": true,
+        "debug.terminal.clearBeforeReusing": true,
+        "terminal.integrated.allowMnemonics": true,
+        "terminal.integrated.cursorBlinking": true,
+        "terminal.integrated.enableBell": true,
+        "terminal.integrated.macOptionIsMeta": true,
+        "terminal.integrated.sendKeybindingsToShell": true,
+        "terminal.integrated.smoothScrolling": true,
+        "python.terminal.activateEnvInCurrentTerminal": true,
+        "remote.SSH.showLoginTerminal": true,
+        "maven.terminal.useJavaHome": true,
+        "jupyter.enableExtendedKernelCompletions": true,
+        "jupyter.sendSelectionToInteractiveWindow": true,
+        "workbench.editorAssociations": {
+            "*.vsix": "default"
+        },
+        "editor.unicodeHighlight.invisibleCharacters": false,
+        "terminal.integrated.macOptionClickForcesSelection": true,
+        "[javascript]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "cloudcode.kubectlExecShell": "bash",
+        "terminal.integrated.automationProfile.linux": {
+        
+        },
+        "workbench.settings.openDefaultKeybindings": true,
+        "window.experimental.useSandbox": true,
+        "terminal.integrated.copyOnSelection": true,
+        "terminal.integrated.env.linux": {
+        
+        },
+        "terminal.integrated.defaultProfile.windows": "Git Bash",
+        
+        
+       
+       
         
 }
-{
-"java.configuration.runtimes": [
-  {
-    "name": "JavaSE-1.8",
-    "path": "/path/to/jdk-8",
-  },
-  {
-    "name": "JavaSE-11",
-    "path": "/path/to/jdk-11",
-  },
-  {
-    "name": "JavaSE-19",
-    "path": "/path/to/jdk-19",
-    "default": true
-  },
-]
-};
-"java.configuration.runtimes": [
-  {
-    "name": "JavaSE-1.8",
-    "path": "/path/to/jdk-8",
-  },
-  {
-    "name": "JavaSE-11",
-    "path": "/path/to/jdk-11",
-  },
-  {
-    "name": "JavaSE-17",
-    "path": "/path/to/jdk-17",
-    "default": true
-  },
-];

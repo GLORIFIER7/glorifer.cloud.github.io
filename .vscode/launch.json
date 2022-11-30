@@ -16,6 +16,19 @@
 			"request": "launch",
 			"name": "Bash-Debug (simplest configuration)",
 			"program": "${file}"
-		}
+		},
+
+		
+        {
+            "name": "Deploy Cloud Function",
+            "type": "cloudcode.cloudfunctions",
+            "request": "launch",
+            "functionName": "",
+            "gen": "",
+            "runtime": "",
+            "entryPoint": "",
+            "testInput": ""
+        }
+    
 	]
 }
