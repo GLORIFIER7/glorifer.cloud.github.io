@@ -23,3 +23,11 @@ Create a route with the following details:
 - method is get
 - response: Hello from the /hello endpoint
 */
+app.get("/hello", (req,res) => res.send("Hello from the /hello endpoint"));
+
+app.post("/greeting", (req, res) => {
+    console.log(req.body);
+    res.send(`Hello there!, ${req.body.name}`)
+});
+
+app.listen(PORT, () => console.log(`Server is running at port ${PORT}`));
