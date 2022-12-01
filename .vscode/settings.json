@@ -275,6 +275,10 @@
         
         },
         "terminal.integrated.defaultProfile.windows": "Git Bash",
+        "docker.environment": {
+            "glorifier": "glorifier"
+        },
+        "merge-conflict.autoNavigateNextConflict.enabled": true,
         
         
        
