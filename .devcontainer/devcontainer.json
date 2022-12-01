@@ -19,7 +19,8 @@
 				"rogalmic.bash-debug",
 				"redhat.java",
 				"Shan.code-settings-sync",
-				"ms-azuretools.vscode-docker"
+				"ms-azuretools.vscode-docker",
+				"mongodb.mongodb-vscode"
 			]
 		}
 	},

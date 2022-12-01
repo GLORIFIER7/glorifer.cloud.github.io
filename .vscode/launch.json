@@ -5,6 +5,64 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
+			"name": "Docker .NET Core Attach (Preview)",
+			"type": "docker",
+			"request": "attach",
+			"platform": "netCore",
+			"sourceFileMap": {
+				"/src": "${workspaceFolder}"
+			}
+		},
+		{
+			"args": [
+				"--extensionDevelopmentPath=${workspaceFolder}"
+			],
+			"name": "Launch Extension",
+			"outFiles": [
+				"${workspaceFolder}/out/**/*.js"
+			],
+			"preLaunchTask": "npm",
+			"request": "launch",
+			"type": "extensionHost"
+		},
+		{
+			"console": "integratedTerminal",
+			"internalConsoleOptions": "neverOpen",
+			"name": "nodemon",
+			"program": "${workspaceFolder}/app.js",
+			"request": "launch",
+			"restart": true,
+			"runtimeExecutable": "nodemon",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"type": "node"
+		},
+		{
+			"name": "Cloud Run: Run/Debug Locally",
+			"type": "cloudcode.cloudrun",
+			"request": "launch",
+			"build": {
+				"docker": {
+					"path": "Dockerfile"
+				}
+			},
+			"image": "${workspaceFolderBasename}",
+			"service": {
+				"name": "${workspaceFolderBasename}",
+				"containerPort": 8080,
+				"resources": {
+					"limits": {
+						"memory": "256Mi"
+					}
+				}
+			},
+			"target": {
+				"minikube": {}
+			},
+			"watch": true
+		},
+		{
 			"command": "npm start",
 			"name": "Run npm start",
 			"request": "launch",
