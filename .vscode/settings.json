@@ -262,7 +262,7 @@
         "editor.unicodeHighlight.invisibleCharacters": false,
         "terminal.integrated.macOptionClickForcesSelection": true,
         "[javascript]": {
-            "editor.defaultFormatter": "esbenp.prettier-vscode"
+            "editor.defaultFormatter": "vscode.typescript-language-features"
         },
         "cloudcode.kubectlExecShell": "bash",
         "terminal.integrated.automationProfile.linux": {
@@ -279,6 +279,13 @@
             "glorifier": "glorifier"
         },
         "merge-conflict.autoNavigateNextConflict.enabled": true,
+        "cloudcode.kubeconfigs": [
+            {
+                "name": "c:\\Users\\89\\.kube\\config",
+                "configPath": "c:\\Users\\89\\.kube\\config"
+            }
+        ],
+        "cloudcode.active-kubeconfig": "c:\\Users\\89\\.kube\\config",
         
         
        
