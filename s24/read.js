@@ -148,3 +148,13 @@ db.users.find(
     please submit this on Monday
     CLUE: change the value in $options keyword
 */
+
+db.users.find(
+    {
+        firstName: {$regex: "S"}, $option: "i",
+        firstName: { $regex: "N" }, $option: "i"
+    },
+    {
+        firstName: 1, lastName: 1, _id:0
+    }
+);
