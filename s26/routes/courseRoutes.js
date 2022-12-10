@@ -54,3 +54,26 @@ router.put('/unarchive', auth.verify, (req, res) => {
 router.put('/:courseId/archive', auth.verify, (req, res) => {
     courseController.archiveByCourseId(req.params.courseId).then(result => res.send(result))
 })
+
+//unarchive course by id
+router.put('/:courseID/unarchive', auth.verify, (req,res) => {
+    courseController.unarchiveCourseById(req.params.courseID).then(result => res.send(result))
+})
+
+//edit the course using course id
+router.put('/:courseId/edit', auth.verify, (req,res) => {
+    courseController.editCourse(req.params.courseId, req.body).then(result => res.send(result))
+})
+
+//delete course using findOneAndDelete()
+router.delete('/delete-course', auth.verify, (req,res) => {
+    courseController.deleteCourse(req.body.courseName).then (result => res.send(result))
+})
+
+//delete course using findByIDAndDelete()
+router.delete('/:courseID/delete-course', auth.verify,  (req, res) => {
+    courseController.deleteCourseById(req.params.courseID).then(result => res.send(result))
+})
+
+
+module.exports = router;

@@ -1,12 +1,9 @@
 //import the models
 const User = require('./../models/User');
 const Course = require('./../models/Course');
-
 const bcrypt = require('bcrypt');
 const auth = require('../auth');
-
 module.exports.checkEmail = (reqBody) => {
-
     const {email} = reqBody;
     return User.findOne({email:email}).then((result, error) => {
         if (result != null)
@@ -16,7 +13,7 @@ module.exports.checkEmail = (reqBody) => {
         else {
             if (result == null)
             {
-                return true
+                return 'Email not existing'
             }
             else {
                 return error
@@ -43,8 +40,9 @@ module.exports.register = (reqBody) => {
 }
 module.exports.getAllUsers = () => {
     return User.find().then((result, error) => {
+
         if (result){
-            return true
+            return result
         } else {
             return error
         }
@@ -60,12 +58,10 @@ module.exports.login = (reqBody) => {
             //what if we found an existing email but the pw is incorrect?
             //check the code below
             let isPasswordCorrect = bcrypt.compareSync(password, result.password);
-
             if(isPasswordCorrect == true)
             {
                 return {access:auth.createAccessToken(result)}
             }
-
             else {
                 return false
             }
@@ -118,16 +114,12 @@ module.exports.enroll = async (data) => {
         return false
     }
 }
-
 module.exports.newEnroll = (data) => {
     const {userId, courseId} = data;
-
     return User.findById(userId).then((result, err)=> {
         result.enrollments.push({courseId:courseId})
-
         if (result){
             console.log(result.enrollments.length);
-
             if (result.enrollments.length != 0){
                 return result.enrollments.find( element => {
                     if (element.courseId == courseId){
@@ -141,7 +133,6 @@ module.exports.newEnroll = (data) => {
                 })
             }
         }
-
         else {
             return error
         }
