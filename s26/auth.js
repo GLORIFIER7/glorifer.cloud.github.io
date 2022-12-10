@@ -1,63 +1,56 @@
-//jsonwebtoken - purely used for authentication
-//authentication process:
-    //sign
-    //verify 
-    //decode
+//jsonwebtoken
+	//sign
+	//verify
+	//decode
 
-/*
-    JSON Web Token (JWT) - it is a standard that defines a compact and self-contained way for secure
-    transmission of information as a JSON object.
-    - it can be signed using a secret, public or provate key pair.
-*/
-//import the dependencies
-const jwt = require('jsonwebtoken');
 
-const secret = 'CourseBookingAPI';
+const jwt = require("jsonwebtoken")
+const secret = "CourseBookingAPI";
 
-//signing process
-module.exports.createAccessToken =(user) => {
-    const data = {
-        id: user_id,
-        email: user.email,
-        isAdmin: user.isAdmin
-    }
+module.exports.createAccessToken = (user) => {
+	const data = {
+		id: user._id, 
+		email: user.email,
+		isAdmin: user.isAdmin
+	}
 
-    return jwt.sign(data, secret, {});
+	return jwt.sign(data, secret, {});
+//.sign(<data>, <secret_key>, {})
 }
 
-//verify process
-module.exports.verify = (req,res,next) => {
-    //get the token in the header's authorization
-    let token = req.header.authorization
 
-    if(typeof token !== "undefined")
-    {
-        token = token.slice(7, token.length);
-        //tells the server what routes, services, and resources the user is allowed to access.
 
-        //syntax: jwt.verify (token, secret, cb(error, data))
-        return jwt.verify(token,secret, (err,data) => {
-            if (err){
-                return res.send({auth:'failed'})
-            } else {
-                next();
-            }
-        })
-    }
+module.exports.verify = (req, res, next) => {
+	//get the token in the headers authorization
+	let token = req.headers.authorization
+
+	if(typeof token !== "undefined"){
+
+		token = token.slice(7, token.length)
+
+		//jwt.verify(token, secret, cb(error, data))
+		return jwt.verify(token, secret, (err, data) => {
+			if(err){
+				return res.send( {auth: "failed"} )
+			} else {
+				next()
+			}
+		})
+	}
 }
 
-//decoding process
+
 module.exports.decode = (token) => {
-    if (typeof token != 'undefined')
-    {
-        token = token.slice(7, token.length)
 
-        return jwt.verify(token, secret, (err,data) => {
-            if (err){
-                return null
-            } else {
-                return jwt.decode(token, {complete: true}).payload
-            }
-        })
-    }
+	if(typeof token != "undefined"){
+		token = token.slice(7, token.length)
+
+		return jwt.verify(token, secret, (err, data) => {
+			if(err){
+				return null
+			} else {
+				return jwt.decode(token, {complete: true}).payload
+			}
+		})
+	}
 }
