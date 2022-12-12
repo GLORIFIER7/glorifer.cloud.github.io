@@ -11,9 +11,11 @@ const userRoutes = require("./routes/userRoutes");
 
 /*mongodb connection & notification*/
 mongoose.connect('mongodb+srv://glorifier:arlos3890@glorifier.kgka7aj.mongodb.net/?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.set('strictQuery',true);
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => console.log(`Connected to Database`));
+
 
 
 /*Middlewares*/
