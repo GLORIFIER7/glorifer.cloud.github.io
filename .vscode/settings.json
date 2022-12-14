@@ -161,7 +161,7 @@
         "dotfiles.repository": "https://github.com/glorifier7.io",
         "docker.truncateLongRegistryPaths": true,
         "eag.runCompilerGenerator": true,
-        "emmet.showSuggestionsAsSnippets": true,
+        "emmet.showSuggestionsAsSnippets": false,
         "emmet.useInlineCompletions": true,
         "emmet.triggerExpansionOnTab": true,
         "eslint.alwaysShowStatus": true,
