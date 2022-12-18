@@ -21,7 +21,8 @@
 				"Shan.code-settings-sync",
 				"ms-azuretools.vscode-docker",
 				"mongodb.mongodb-vscode",
-				"auth0.vscode-labs"
+				"auth0.vscode-labs",
+				"WakaTime.vscode-wakatime"
 			]
 		}
 	},
