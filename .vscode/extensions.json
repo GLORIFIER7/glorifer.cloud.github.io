@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "auth0.vscode-labs"
+        "auth0.vscode-labs",
+        "wakatime.vscode-wakatime"
     ]
 }
