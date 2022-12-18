@@ -12,15 +12,17 @@ import AppNavBar from './Components/AppNavBar'
 import Home from './Pages/Home'
 import Login from './Pages/Login'
 import Register from './Pages/Register'
+import Courses from './Pages/Courses'
 
 export default function App() {
   return (
     <Router>
       <AppNavBar />
       <Routes>
-        <Route path="/" element ={<Home />}/>
+        <Route path="/home" element ={<Home />}/>
         <Route path="/login" element ={<Login />}/>
         <Route path="/register" element = {<Register />} />
+        <Route path="/courses" element = {<Courses />} />
       </Routes>
     </Router>
   );
