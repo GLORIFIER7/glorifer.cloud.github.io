@@ -1,6 +1,7 @@
 {
     "recommendations": [
         "auth0.vscode-labs",
-        "wakatime.vscode-wakatime"
+        "wakatime.vscode-wakatime",
+        "esbenp.prettier-vscode"
     ]
 }

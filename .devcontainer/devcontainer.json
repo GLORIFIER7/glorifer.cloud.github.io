@@ -22,7 +22,8 @@
 				"ms-azuretools.vscode-docker",
 				"mongodb.mongodb-vscode",
 				"auth0.vscode-labs",
-				"WakaTime.vscode-wakatime"
+				"WakaTime.vscode-wakatime",
+				"esbenp.prettier-vscode"
 			]
 		}
 	},
