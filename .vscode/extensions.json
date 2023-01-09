@@ -2,6 +2,8 @@
     "recommendations": [
         "auth0.vscode-labs",
         "wakatime.vscode-wakatime",
-        "esbenp.prettier-vscode"
+        "esbenp.prettier-vscode",
+        "robbowen.synthwave-vscode",
+        "mongodb.mongodb-vscode"
     ]
 }
